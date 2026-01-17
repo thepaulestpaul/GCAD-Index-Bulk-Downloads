@@ -281,8 +281,7 @@ max_wait_time = 300  # Seconds (default: 5 minutes)
 - **Note**: Files are automatically moved to organized folders after download
 
 ### "Missing metadata columns"
-- **Solution**: You're using the old version - download `v6_fixed` version
-- Re-run script to update existing index
+- This is a current bug, the next release will contain a fix
 
 ### Out of disk space
 - **Solution**: 
