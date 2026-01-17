@@ -5,7 +5,8 @@
 This script automatically downloads files listed on GunCAD Index which  is a search engine for DIY gun designs. It is not for children. By utilizng this script, you acknowledge and agree that:
 
 You are at least 18 years of age
-You have read and agree to the GunCad Index site's terms and policies outlined here
+You have read and agree to the GunCad Index site's terms and policies outlined here:
+https://guncadindex.com/legal
 You understand that firearm-related information (including but not limited to design files) may be regulated in your jurisdiction
 You are legally permitted, under all applicable laws and regulations, to access and possess information about DIY firearms
 If you are a resident of a jurisdiction that restricts access to or dissemination of firearm-related technical information, you affirm that you are exempt from such restrictions or otherwise legally authorized to access it. Such jurisdictions may include, but are not limited to:
