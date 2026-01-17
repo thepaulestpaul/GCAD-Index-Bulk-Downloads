@@ -2,7 +2,8 @@
 .py script with the default capability to downloads and locally store all files from LBRY listed in guncadindex.com "release" API, along with the index's metadata for these files. Creates a folder structure and a synchronized excel database to enable user friendly methods to locate files saved to a user-specified filed path 
 
 
-!!!IMPORTANT!!!
+!!! IMPORTANT !!!
+
 This script automatically downloads files listed on GunCAD Index which  is a search engine for DIY gun designs. It is not for children. By utilizng this script, you acknowledge and agree that:
 
 You are at least 18 years of age
