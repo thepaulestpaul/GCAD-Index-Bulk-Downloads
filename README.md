@@ -39,8 +39,6 @@ A comprehensive Python script for downloading, organizing, and cataloging files 
 - **Incremental Downloads**: Re-run the script anytime to download only new files - already downloaded files are automatically skipped
 - **Duplicate Detection**: Three-layer duplicate checking using LBRY URLs, file hashes, and filesystem scanning
 - **Resume Capability**: Failed downloads can be retried on subsequent runs
-- **Progress Tracking**: Real-time download progress with speed indicators and ETA calculations
-- **Stall Detection**: Automatically detects and handles stalled downloads (30-second threshold)
 
 ### Intelligent File Organization
 - **Intent-Based Categorization**: Files are organized by purpose, not just tags
@@ -68,9 +66,6 @@ A comprehensive Python script for downloading, organizing, and cataloging files 
 - **Configurable Output Directory**: Choose your download location at startup
 - **Adjustable Download Quantity**: Download 25 files or all 25,000+ files
 - **Tag Filtering**: Exclude unwanted categories (furniture, accessories, jigs, etc.)
-- **Batch Excel Updates**: Index updates every 10 downloads to prevent data loss
-- **Failed Download Tracking**: Comprehensive logging of download failures with reasons
-- **Session Statistics**: Real-time counters for successful, failed, and filtered downloads
 
 ### File Verification
 - **ZIP Validation**: Tests zip file integrity
