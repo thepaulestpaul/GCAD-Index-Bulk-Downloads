@@ -3,8 +3,6 @@ GunCAD Index Downloader v6 - Quality of Life Edition (FIXED)
 Based on v5 Intent-Based Organization with new features:
 - Real-time failed downloads counter
 - Configurable output directory at startup
-- Adjustable download timeout with explanations
-- Batch Excel updates every N downloads
 - Estimated time remaining (ETA) indicator
 - LBRY URL tracking in Excel for reliable duplicate detection
 - Full description, notes, and readme fields (not truncated)
