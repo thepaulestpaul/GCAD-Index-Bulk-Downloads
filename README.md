@@ -216,18 +216,18 @@ The generated Excel file contains 21 columns:
 | Tags | All GunCAD tags |
 | File Size (MB) | File size in megabytes |
 | **Release Date** | Original release date |
-| **Last Updated** | Most recent update |
+| Last Updated | Most recent update |
 | **Author** | Creator/uploader |
 | **Version** | Version number if available |
 | Date Downloaded | When you downloaded it |
-| **Odysee Views** | View count on Odysee |
-| **Odysee Likes** | Like count |
-| **Odysee Dislikes** | Dislike count |
+| Odysee Views | View count on Odysee |
+| Odysee Likes | Like count |
+| Odysee Dislikes | Dislike count |
 | Description | Full description text |
 | Notes | Release notes |
 | Readme | Readme content |
 
-**Bold** = Newly fixed metadata fields
+**Bold** = metadata fields that need to be fixed
 
 ## 🎛️ Advanced Configuration
 
