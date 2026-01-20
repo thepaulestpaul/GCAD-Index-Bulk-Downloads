@@ -223,7 +223,7 @@ The generated Excel file contains 21 columns:
 | Odysee Views | View count on Odysee |
 | Odysee Likes | Like count |
 | Odysee Dislikes | Dislike count |
-| Description | Full description text |
+| **Description** | Full description text |
 | Notes | Release notes |
 | Readme | Readme content |
 
