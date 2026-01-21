@@ -227,7 +227,7 @@ The generated Excel file contains 21 columns:
 | Notes | Release notes |
 | Readme | Readme content |
 
-**Bold** = metadata fields that need to be fixed
+**Bold** = metadata fields that were recently fixed
 
 ## 🎛️ Advanced Configuration
 
