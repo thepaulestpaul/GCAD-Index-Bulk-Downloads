@@ -27,7 +27,7 @@ Workaround to be published soon.
      
    - You are solely responsible for ensuring your compliance with all applicable laws
      
-   - GunCAD Index does not host, control, or distribute any linked content. It is purely an index and search engine. You access any sites linked on guncadindex.com directly or via this script or any other automation tools at your own risk and are subject to their terms and policies
+   - GunCAD Index does not host, control, or distribute any linked content. It is purely an index and search engine. You access any sites linked on [guncadindex.com](https://guncadindex.com/) directly or via this script or any other automation tools at your own risk and are subject to their terms and policies
 
 
 #
