@@ -9,7 +9,7 @@ Workaround to be published soon.
 
 # !!! IMPORTANT - MUST READ !!!
 
- ******The scripts and other files in this repository automatically download files listed on GunCAD Index which is a search engine for DIY gun designs. It is not for children. By utilizng any of the content located in or linked to this repository, including but not limited to scripts and other types of files, you acknowledge and agree that:******
+ ******The scripts and other files in this repository automatically download files listed on GunCAD Index which is a search engine for DIY gun designs. It is not for children. By utilizng any of the content located in or linked to this repository, including but not limited to: scripts and other types of files, or by any accessing  [guncadindex.com](https://guncadindex.com/) by any other means, you acknowledge and agree that:******
 
    - You are at least 18 years of age
 
@@ -27,7 +27,9 @@ Workaround to be published soon.
      
    - You are solely responsible for ensuring your compliance with all applicable laws
      
-   - GunCAD Index does not host, control, or distribute any linked content. It is purely an index and search engine. You access any sites linked on [guncadindex.com](https://guncadindex.com/) directly or via this script or any other automation tools at your own risk and are subject to their terms and policies
+   - GunCAD Index does not host, control, or distribute any linked content. It is purely an index and search engine. You access any sites linked on [guncadindex.com](https://guncadindex.com/) directly or via or any other means at your own risk and are subject to their terms and policies
+
+******If you do not agree to the above, please navigate away from this repository, and do not attempt to download or utilize any of the content within it******
 
 
 #
