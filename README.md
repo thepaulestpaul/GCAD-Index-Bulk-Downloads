@@ -17,7 +17,7 @@ Workaround to be published soon.
    
    - You understand that firearm-related information (including but not limited to design files) may be regulated in your jurisdiction
    
-   - You are legally permitted, under all applicable laws and regulations, to access and possess information about DIY firearms.
+   - You are legally permitted, under all applicable laws and regulations, to access and possess information about DIY firearms
      
    - If you are a resident of a jurisdiction that restricts access to or dissemination of firearm-related technical information, you affirm that you are exempt from such restrictions or otherwise legally authorized to access it. Such jurisdictions may include, but are not limited to:
      
