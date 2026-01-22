@@ -1,5 +1,11 @@
 # GCAD-Index-Bulk-Downloads
 
+this script is no longer functional due to the implementation
+of cloudflair on guncadindex. you can thank the perpetrators of a recent
+ddos attack for that.
+
+
+
 !!! IMPORTANT !!!
 
 This script automatically downloads files listed on GunCAD Index which  is a search engine for DIY gun designs. It is not for children. By utilizng this script, you acknowledge and agree that:
@@ -35,7 +41,7 @@ A comprehensive Python script for downloading, organizing, and cataloging files 
 
 ### Smart Download Management
 - **Incremental Downloads**: Re-run the script anytime to download only new files - already downloaded files are automatically skipped
-- **Duplicate Detection**: Three-layer duplicate checking using LBRY URLs, file hashes, and filesystem scanning
+- **Duplicate Detection**: Three-layer duplicate checking using LBRY URLs, Exel tracking, and filesystem scanning
 - **Resume Capability**: Failed downloads can be retried on subsequent runs
 
 ### Intelligent File Organization
@@ -224,8 +230,8 @@ The generated Excel file contains 21 columns:
 | Odysee Likes | Like count |
 | Odysee Dislikes | Dislike count |
 | **Description** | Full description text |
-| Notes | Release notes |
-| Readme | Readme content |
+| Notes | Release notes | this needs to be removed or updated
+| Readme | Readme content | this needs to be removed or updated
 
 **Bold** = metadata fields that were recently fixed
 
