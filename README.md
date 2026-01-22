@@ -4,6 +4,8 @@ this script is no longer functional due to the implementation
 of cloudflair on guncadindex. you can thank the perpetrators of a recent
 ddos attack for that.
 
+Workaround to be published soon.
+
 
 
 !!! IMPORTANT !!!
