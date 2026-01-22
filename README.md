@@ -9,7 +9,7 @@ Workaround to be published soon.
 
 # !!! IMPORTANT - MUST READ !!!
 
- ******The scripts in this repository automatically download files listed on GunCAD Index which is a search engine for DIY gun designs. It is not for children. By utilizng this script, you acknowledge and agree that:******
+ ******The scripts and other files in this repository automatically download files listed on GunCAD Index which is a search engine for DIY gun designs. It is not for children. By utilizng any of the content located in or linked to this repository, including but not limited to scripts and other types of files, you acknowledge and agree that:******
 
    - You are at least 18 years of age
 
