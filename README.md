@@ -1,7 +1,7 @@
 # GCAD-Index-Bulk-Downloads
 
-this script is no longer functional due to the implementation
-of cloudflair on guncadindex. you can thank the perpetrators of a recent
+This script is no longer functional due to the implementation
+of cloudflair on guncadindex. You can thank the perpetrators of a recent
 ddos attack for that.
 
 Workaround to be published soon.
