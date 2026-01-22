@@ -29,7 +29,7 @@ Workaround to be published soon.
      
    - GunCAD Index does not host, control, or distribute any linked content. It is purely an index and search engine. You access any sites linked on [guncadindex.com](https://guncadindex.com/) directly or via or any other means at your own risk and are subject to their terms and policies
 
-******If you do not agree to the above, please navigate away from this repository, and do not attempt to download or otherwise utilize any of the content within it******
+******If you do not agree to the above, please navigate away from this repository, and do not download, attempt to download, or otherwise utilize any of the content within it******
 
 
 #
