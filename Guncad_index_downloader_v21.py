@@ -461,24 +461,111 @@ class FileVerifier:
 
         return True, f"File downloaded ({file_size / 1024 / 1024:.2f}MB)"
 
-    class GunCADIndexAPIClient:
-        """Client for GunCAD Index API"""
+class GunCADIndexAPIClient:
+    """Client for GunCAD Index API"""
 
-        def __init__(self, api_base='https://guncadindex.com/api'):
-            self.api_base = api_base
-            self.session = requests.Session()
+    def __init__(self, api_base='https://guncadindex.com/api'):
+        self.api_base = api_base
+        self.session = requests.Session()
 
-            # Try to load existing cookies first
-            cookie_data = self.load_cookies()
+        # Try to load existing cookies first
+        cookie_data = self.load_cookies()
 
-            if cookie_data:
-                self.session.cookies.set('cf_clearance', cookie_data['cf_clearance'])
+        if cookie_data:
+            self.session.cookies.set('cf_clearance', cookie_data['cf_clearance'])
 
 
-                user_agent = cookie_data['user_agent']
-                if 'tiaga' not in user_agent:
-                    user_agent = user_agent + " tiaga/1.0"
+            user_agent = cookie_data['user_agent']
+            if 'tiaga' not in user_agent:
+                user_agent = user_agent + " tiaga/1.0"
 
+            self.session.headers.update({
+                'User-Agent': user_agent,
+                'Accept': 'application/json',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Referer': 'https://guncadindex.com/',
+                'Origin': 'https://guncadindex.com'
+            })
+        else:
+            # No cookies found, extract them automatically
+            print("\n⚠ No valid Cloudflare cookies found")
+            print("📡 Attempting automatic extraction...")
+            if self.auto_extract_cookies():
+                print("✓ Cookies extracted successfully!")
+            else:
+                print("✗ Cookie extraction failed - API may not work")
+
+    def load_cookies(self):
+        """Load cookies from JSON file if they exist and are recent"""
+        try:
+            if os.path.exists('cloudflare_cookies.json'):
+                with open('cloudflare_cookies.json', 'r', encoding='utf-8') as f:
+                    cookie_data = json.load(f)
+
+                # Check if cookies are less than 24 hours old
+                from datetime import datetime, timedelta
+                extracted_time = datetime.strptime(cookie_data['extracted_at'], '%Y-%m-%d %H:%M:%S')
+                if datetime.now() - extracted_time < timedelta(hours=24):
+                    return cookie_data
+        except:
+            pass
+        return None
+
+    def auto_extract_cookies(self):
+        """Automatically extract Cloudflare cookies using Selenium"""
+        try:
+            from selenium import webdriver
+            from selenium.webdriver.chrome.options import Options
+            from selenium.webdriver.support.ui import WebDriverWait
+            from selenium.webdriver.support import expected_conditions as EC
+            from selenium.webdriver.common.by import By
+        except ImportError:
+            print("✗ Selenium not installed. Run: pip install selenium")
+            return False
+
+        try:
+            chrome_options = Options()
+            chrome_options.add_argument('--disable-blink-features=AutomationControlled')
+            chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+            chrome_options.add_experimental_option('useAutomationExtension', False)
+            chrome_options.add_argument('--headless')  # Run invisible
+
+            driver = webdriver.Chrome(options=chrome_options)
+            driver.get("https://guncadindex.com")
+
+            time.sleep(10)  # Wait for Cloudflare
+
+            WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.TAG_NAME, "body"))
+            )
+
+            cookies = driver.get_cookies()
+            user_agent = driver.execute_script("return navigator.userAgent")
+
+
+            user_agent = user_agent + " tiaga/1.0"
+
+            cf_clearance = None
+            for cookie in cookies:
+                if cookie['name'] == 'cf_clearance':
+                    cf_clearance = cookie['value']
+                    break
+
+            driver.quit()
+
+            if cf_clearance:
+                # Save cookies
+                cookie_data = {
+                    'cf_clearance': cf_clearance,
+                    'user_agent': user_agent,
+                    'extracted_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                }
+
+                with open('cloudflare_cookies.json', 'w', encoding='utf-8') as f:
+                    json.dump(cookie_data, f, indent=2)
+
+                # Update session
+                self.session.cookies.set('cf_clearance', cf_clearance)
                 self.session.headers.update({
                     'User-Agent': user_agent,
                     'Accept': 'application/json',
@@ -486,101 +573,14 @@ class FileVerifier:
                     'Referer': 'https://guncadindex.com/',
                     'Origin': 'https://guncadindex.com'
                 })
-            else:
-                # No cookies found, extract them automatically
-                print("\n⚠ No valid Cloudflare cookies found")
-                print("📡 Attempting automatic extraction...")
-                if self.auto_extract_cookies():
-                    print("✓ Cookies extracted successfully!")
-                else:
-                    print("✗ Cookie extraction failed - API may not work")
 
-        def load_cookies(self):
-            """Load cookies from JSON file if they exist and are recent"""
-            try:
-                if os.path.exists('cloudflare_cookies.json'):
-                    with open('cloudflare_cookies.json', 'r', encoding='utf-8') as f:
-                        cookie_data = json.load(f)
+                return True
 
-                    # Check if cookies are less than 24 hours old
-                    from datetime import datetime, timedelta
-                    extracted_time = datetime.strptime(cookie_data['extracted_at'], '%Y-%m-%d %H:%M:%S')
-                    if datetime.now() - extracted_time < timedelta(hours=24):
-                        return cookie_data
-            except:
-                pass
-            return None
+            return False
 
-        def auto_extract_cookies(self):
-            """Automatically extract Cloudflare cookies using Selenium"""
-            try:
-                from selenium import webdriver
-                from selenium.webdriver.chrome.options import Options
-                from selenium.webdriver.support.ui import WebDriverWait
-                from selenium.webdriver.support import expected_conditions as EC
-                from selenium.webdriver.common.by import By
-            except ImportError:
-                print("✗ Selenium not installed. Run: pip install selenium")
-                return False
-
-            try:
-                chrome_options = Options()
-                chrome_options.add_argument('--disable-blink-features=AutomationControlled')
-                chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-                chrome_options.add_experimental_option('useAutomationExtension', False)
-                chrome_options.add_argument('--headless')  # Run invisible
-
-                driver = webdriver.Chrome(options=chrome_options)
-                driver.get("https://guncadindex.com")
-
-                time.sleep(10)  # Wait for Cloudflare
-
-                WebDriverWait(driver, 20).until(
-                    EC.presence_of_element_located((By.TAG_NAME, "body"))
-                )
-
-                cookies = driver.get_cookies()
-                user_agent = driver.execute_script("return navigator.userAgent")
-
-
-                user_agent = user_agent + " tiaga/1.0"
-
-                cf_clearance = None
-                for cookie in cookies:
-                    if cookie['name'] == 'cf_clearance':
-                        cf_clearance = cookie['value']
-                        break
-
-                driver.quit()
-
-                if cf_clearance:
-                    # Save cookies
-                    cookie_data = {
-                        'cf_clearance': cf_clearance,
-                        'user_agent': user_agent,
-                        'extracted_at': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                    }
-
-                    with open('cloudflare_cookies.json', 'w', encoding='utf-8') as f:
-                        json.dump(cookie_data, f, indent=2)
-
-                    # Update session
-                    self.session.cookies.set('cf_clearance', cf_clearance)
-                    self.session.headers.update({
-                        'User-Agent': user_agent,
-                        'Accept': 'application/json',
-                        'Accept-Language': 'en-US,en;q=0.9',
-                        'Referer': 'https://guncadindex.com/',
-                        'Origin': 'https://guncadindex.com'
-                    })
-
-                    return True
-
-                return False
-
-            except Exception as e:
-                print(f"✗ Auto-extraction error: {e}")
-                return False
+        except Exception as e:
+            print(f"✗ Auto-extraction error: {e}")
+            return False
 
     def get_all_tags(self, scan_pages=5):
         """Fetch all available tags by scanning releases"""
@@ -1889,4 +1889,5 @@ it. Such jurisdictions may include, but are not limited to:
 
 
 if __name__ == '__main__':
+
     main()
