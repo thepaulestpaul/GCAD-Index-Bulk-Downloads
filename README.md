@@ -6,6 +6,8 @@ ddos attack for that.
 
 Workaround to be published soon.
 
+Update: automated cloudflair workaround has been added but not tested. Feel free to give it a whirl. Will test and debug this weekend as time allows. 
+
 
 # !!! IMPORTANT - MUST READ !!!
 
