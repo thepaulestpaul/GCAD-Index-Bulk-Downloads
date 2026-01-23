@@ -109,6 +109,8 @@ pip install requests openpyxl
 
 **⚠️ The script REQUIRES LBRY Desktop to be running - it cannot download files without it!**
 
+**⚠️ Make sure you are setting the seeding options to 0 during LBRY setupt, and not allowing LBRY to seed all viewed content (and that these options save). This will double the storage needed and has other possible legal implications regarding redistributing 3D printable firearm designs (this is typically location dependent, but I am not a lawyer)**
+
 #### Download LBRY Desktop:
 - **Windows/Mac/Linux**: [https://lbry.com/get](https://lbry.com/get)
 
