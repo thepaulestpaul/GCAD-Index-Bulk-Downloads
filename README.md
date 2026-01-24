@@ -93,7 +93,7 @@ A comprehensive Python script for downloading, organizing, and cataloging files 
 
 ## 🔧 Installation
 
-### 1. Install Python Dependencies
+### 1. (no longer needed, this was just added to the script) Install Python Dependencies
 ```bash
 pip install requests openpyxl
 ```
