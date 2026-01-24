@@ -29,7 +29,10 @@
 
 #
 
-
+# TLDR Instructions: 
+- Download python and LBRY.
+- Keep LBRY running on your desktop
+- Download the .py file and open it with Python.
 
 
 # GunCAD Index Downloader v18
