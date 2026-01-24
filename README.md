@@ -93,10 +93,13 @@ A comprehensive Python script for downloading, organizing, and cataloging files 
 
 ## 🔧 Installation
 
-### 1. (no longer needed, this was just added to the script) Install Python Dependencies
-```bash
-pip install requests openpyxl
-```
+### 1. Install Python D
+1. Download and run the installer: Visit https://www.python.org/downloads/ to download Python for your operating system. 
+   - On Windows, check "Add Python to PATH" during installation.
+
+2. Verify installation: Open your terminal and type:
+``` python --version ``` to confirm it's installed correctly.
+
 
 ### 2. Install and Configure LBRY Desktop (CRITICAL)
 
@@ -123,7 +126,7 @@ pip install requests openpyxl
 
 ### 3. Download the Script
 
-Save `guncad_downloader_v6_fixed.py` to your desired location.
+Save `guncad_index_downloader_v18.4` to your desired location.
 
 ## 🚀 Usage
 
@@ -333,6 +336,6 @@ Users must ensure they comply with all applicable laws and regulations.
 
 ---
 
-**Version**: 6.0 (Fixed Metadata Edition)  
-**Last Updated**: January 2025  
-**Status**: Active Development
+**Version**: 18.4 (Fixed Metadata Edition)  
+**Last Updated**: January 2026  
+**Status**: Production Ready
