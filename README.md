@@ -1,12 +1,5 @@
 # GCAD-Index-Bulk-Downloads
 
-This script is no longer functional due to the implementation
-of cloudflair on guncadindex. You can thank the perpetrators of a recent
-ddos attack for that.
-
-Workaround to be published soon.
-
-Update: automated cloudflair workaround has been added but not tested. Feel free to give it a whirl. Will test and debug this weekend as time allows. 
 
 
 # !!! IMPORTANT - MUST READ !!!
