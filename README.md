@@ -324,7 +324,8 @@ Users must ensure they comply with all applicable laws and regulations.
 
 ## 🙏 Credits
 
-- **GunCAD Index**: [https://guncadindex.com](https://guncadindex.com)
+- **GunCAD Index**: [https://guncadindex.com](https://guncadindex.com) and their community contributors 
+   - GunCAD Index Community contributions by 3dprintfreedom, @cringelemon, @MainePla, @_GUMM13, and @Shittinator
 - **LBRY Protocol**: [https://lbry.com](https://lbry.com)
 - Original script concept and development: Community effort
 
