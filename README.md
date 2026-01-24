@@ -32,7 +32,7 @@
 
 
 
-# GunCAD Index Downloader v6
+# GunCAD Index Downloader v18
 
 A comprehensive Python script for downloading, organizing, and cataloging files from the GunCAD Index. Features intelligent file organization, Excel metadata tracking, and robust duplicate detection.
 
@@ -129,7 +129,7 @@ Save `guncad_downloader_v6_fixed.py` to your desired location.
 
 ### Basic Usage
 ```bash
-python guncad_downloader_v6_fixed.py
+python guncad_index_downloader_v18.4
 ```
 
 The script will guide you through:
