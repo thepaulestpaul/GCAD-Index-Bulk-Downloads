@@ -228,7 +228,7 @@ The generated Excel file contains 21 columns:
 | **Release Date** | Original release date |
 | Last Updated | Most recent update |
 | **Author** | Creator/uploader |
-| **Version** | canonical_release_state (broken)  |
+| Version | canonical_release_state (broken)  |
 | Date Downloaded | When you downloaded it |
 | Odysee Views | View count on Odysee |
 | Odysee Likes | Like count |
@@ -237,7 +237,7 @@ The generated Excel file contains 21 columns:
 | Notes | (disused)
 | Readme | (disused) 
 
-**Bold** = metadata fields that were recently fixed
+**Bold** = metadata fields fixed in v18 and above
 
 ## 🎛️ Advanced Configuration
 
