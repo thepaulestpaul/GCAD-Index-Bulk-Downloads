@@ -93,7 +93,7 @@ A comprehensive Python script for downloading, organizing, and cataloging files 
 
 ## 🔧 Installation
 
-### 1. Install Python D
+### 1. Install Python
 1. Download and run the installer: Visit https://www.python.org/downloads/ to download Python for your operating system. 
    - On Windows, check "Add Python to PATH" during installation.
 
