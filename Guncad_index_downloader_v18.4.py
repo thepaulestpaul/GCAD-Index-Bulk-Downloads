@@ -11,6 +11,61 @@ Based on v5 Intent-Based Organization with new features:
 - Directory-scoped file checking
 """
 
+# Auto-install required packages
+import sys
+import subprocess
+
+def install_package(package_name):
+    """Install a package using pip"""
+    print(f"Installing {package_name}...")
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", package_name])
+        print(f"✓ {package_name} installed successfully")
+        return True
+    except subprocess.CalledProcessError:
+        print(f"✗ Failed to install {package_name}")
+        return False
+
+# Check and install required packages
+required_packages = {
+    'requests': 'requests',
+    'openpyxl': 'openpyxl'
+}
+
+missing_packages = []
+for import_name, package_name in required_packages.items():
+    try:
+        __import__(import_name)
+    except ImportError:
+        missing_packages.append(package_name)
+
+if missing_packages:
+    print("\n" + "="*70)
+    print("MISSING REQUIRED PACKAGES")
+    print("="*70)
+    print(f"\nThe following packages need to be installed:")
+    for pkg in missing_packages:
+        print(f"  - {pkg}")
+    print("\nAttempting automatic installation...\n")
+    
+    failed = []
+    for pkg in missing_packages:
+        if not install_package(pkg):
+            failed.append(pkg)
+    
+    if failed:
+        print("\n" + "="*70)
+        print("INSTALLATION FAILED")
+        print("="*70)
+        print(f"\nCould not install: {', '.join(failed)}")
+        print("\nPlease install manually using:")
+        print(f"  pip install {' '.join(failed)}")
+        print("="*70 + "\n")
+        sys.exit(1)
+    else:
+        print("\n✓ All required packages installed successfully!\n")
+
+# Now import the rest of the modules
 import os
 import re
 import time
