@@ -255,12 +255,8 @@ Change how often Excel updates (default: every 10 downloads):
 BATCH_UPDATE_INTERVAL = 10  # Change to desired number
 ```
 
-### Download Timeout
-Adjust maximum wait time per file:
-```python
-# Edit LBRYDaemonClient initialization
-max_wait_time = 300  # Seconds (default: 5 minutes)
-```
+
+
 
 ## 🔍 Troubleshooting
 
