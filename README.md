@@ -30,7 +30,7 @@
 #
 
 # TLDR Instructions: 
-- Download python and LBRY.
+- Download Python and LBRY.
 - Keep LBRY running on your desktop
 - Download the .py file and open it with Python.
 
