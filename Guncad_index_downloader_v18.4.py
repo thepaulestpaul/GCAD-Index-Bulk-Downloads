@@ -1646,7 +1646,7 @@ def get_excluded_tags(api_client):
     print("=" * 70)
 
     print("\nFetching available tags from GunCAD Index...")
-    all_tags = api_client.get_all_tags(scan_pages=10)  # Scan first 10 pages (250 files)
+    all_tags = api_client.get_all_tags(scan_pages=20)  # Scan first 10 pages (250 files)
 
     if all_tags:
         print(f"\n Found {len(all_tags)} unique tags")
