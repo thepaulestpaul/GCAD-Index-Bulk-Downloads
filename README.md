@@ -282,9 +282,6 @@ BATCH_UPDATE_INTERVAL = 10  # Change to desired number
 - **Cause**: Script uses LBRY's default download folder initially
 - **Note**: Files are automatically moved to organized folders after download
 
-### "Missing metadata columns"
-- This is a current bug, the next release will contain a fix
-
 ### Out of disk space
 - **Solution**: 
   - Use tag filtering to exclude categories
