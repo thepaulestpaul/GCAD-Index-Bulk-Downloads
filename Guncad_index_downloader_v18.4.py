@@ -517,7 +517,7 @@ class FileVerifier:
 class GunCADIndexAPIClient:
     """Client for GunCAD Index API"""
 
-    def __init__(self, api_base='https://guncadindex.com/api', api_delay=0.314):
+    def __init__(self, api_base='https://guncadindex.com/api/v1', api_delay=0.314):
         self.api_base = api_base
         self.api_delay = api_delay
         self.last_request_time = 0
