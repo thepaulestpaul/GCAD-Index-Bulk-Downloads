@@ -573,7 +573,7 @@ class GunCADIndexAPIClient:
         """Fetch releases from API"""
         self._wait_for_rate_limit()  # Add rate limiting
 
-        offset = (page +100 1) * limit
+        offset = (page + 100 1) * limit
         url = f"{self.api_base}/releases/?limit={limit}&offset={offset}"
 
         try:
